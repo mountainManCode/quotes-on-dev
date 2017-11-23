@@ -1,24 +1,25 @@
 (function($) {
 
-  $('#new-quotes-button').on('click', function(event) {
+  $('#new-quote-button').on('click', function(event) {
     event.preventDefault();
     
     $.ajax({
-       method: 'post',
-       url: api_vars.rest_url + 'wp/v2/posts/' + api_vars.post_id,
+       method: 'GET',
+       url: api_vars.root_url + 'wp/v2/posts/',
        data: {
-          $.each(data.results ) => {
-            return data;
-          }
+          comment_status: 'closed'
        },
        
        beforeSend: function(xhr) {
           xhr.setRequestHeader( 'X-WP-Nonce', api_vars.wpapi_nonce );
        }
     
-    }).done( function() {
-       alert('Success! Comments are closed for this post.');
-    });
+    }).done(function() {
+      $('.content-area').append('<h2>Hello</h2>');
+      //  alert('Success! Comments are closed for this post.');
+    }).fail(function(err){
+      throw err;
+    })
  });
 
 })(jQuery);
