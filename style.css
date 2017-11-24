@@ -257,8 +257,8 @@ button,
 input,
 select,
 textarea {
-  color: #404040;
-  font-family: sans-serif;
+  color: #fff;
+  font-family: "Exo Web", sans-serif;
   font-size: 1rem;
   line-height: 1.5; }
 
@@ -320,7 +320,7 @@ html {
           box-sizing: inherit; }
 
 body {
-  background: #fff;
+  background: #222222;
   /* Fallback for when there is no custom background color defined. */ }
 
 blockquote, q {
@@ -452,7 +452,7 @@ a {
   float: left;
   width: 100%; }
   .main-navigation ul {
-    display: none;
+    display: block;
     list-style: none;
     margin: 0;
     padding-left: 0; }
@@ -482,16 +482,9 @@ a {
     display: block;
     text-decoration: none; }
 
-/* Small menu. */
-.menu-toggle,
-.main-navigation.toggled ul {
-  display: block; }
-
 @media screen and (min-width: 768px) {
   .menu-toggle {
-    display: none; }
-  .main-navigation ul {
-    display: block; } }
+    display: none; } }
 
 .site-main .comment-navigation, .site-main
 .posts-navigation, .site-main
@@ -617,3 +610,6 @@ object {
 --------------------------------------------------------------*/
 /* All Archives Page */
 /* Submit a Quote Page */
+.hero {
+  width: 50vw;
+  max-height: 100%; }

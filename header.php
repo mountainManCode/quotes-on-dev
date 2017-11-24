@@ -24,15 +24,13 @@
 				<div class="site-branding">
 					<h1 class="site-title screen-reader-text"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 					<p class="site-description"><?php bloginfo( 'description' ); ?></p>
-					<div>
-						<img class="logo" src="../../assets/images/qod-logo.svg" alt="Quotes on dev logo" />
+					<div class="hero">
+						<a href="<?php echo home_url(); ?>">
+							<img class="logo" src="<?php echo get_template_directory_uri(); ?>/assets/images/qod-logo.svg" alt="Quotes on dev logo" />
+						</a>
 					</div>
-				</div><!-- .site-branding -->
 
-				<nav id="site-navigation" class="main-navigation" role="navigation">
-					<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html( 'Primary Menu' ); ?></button>
-					<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
-				</nav><!-- #site-navigation -->
+				</div><!-- .site-branding -->
 			</header><!-- #masthead -->
 
 			<div id="content" class="site-content">

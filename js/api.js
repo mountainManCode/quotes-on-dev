@@ -6,6 +6,7 @@
 
     $('#quote-title').empty();
     $('#quote-content').empty();
+    $('.source').empty();
     
     $.ajax({
        method: 'GET',
@@ -35,7 +36,8 @@
         // Variables being called in ajax
       var quoteAuthor = $('#quote-author').val();
       var quoteContent = $('#quote-content').val();
-      
+      var quoteSource = $('#quote-source').val();
+      var quoteSourceUrl = $("#quote-source-url").val();
       $.ajax({
          method: 'POST',
          url: api_vars.root_url + 'wp/v2/posts',
@@ -43,9 +45,10 @@
            "title":quoteAuthor,
            "content": quoteContent,
            "status": 'publish',
-           "_qod_quote_source": $('#quote-source').val(), 
-           "_qod_quote_source_url": $("#quote-source-url").val()
+           "_qod_quote_source": quoteSource, 
+           "_qod_quote_source_url": quoteSourceUrl
         },
+        
         beforeSend: function(xhr) {
           xhr.setRequestHeader( 'X-WP-Nonce', api_vars.nonce );
         }
