@@ -11,7 +11,7 @@ get_header(); ?>
   <main id="main" class="site-main">
     <section>
       <header>
-        <?php the_title( 'h1 class="entry-title">', '</h1>' ); ?>
+        <?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
       </header>
 
       <?php if( is_user_logged_in() && current_user_can( 'edit_posts' ) ): ?>
@@ -24,11 +24,9 @@ get_header(); ?>
             <input type="text" name="quote_author" id="quote-author">
           </div>
 
-      <!-- var quoteAuthor = $('#quote-author').val(); -->
-
           <div>
             <label for="quote-content">Quote</label>
-            <<textarea type="text" name="quote_content" id="quote-content" cols="20" rows="3"></textarea>
+            <textarea type="text" name="quote_content" id="quote-content" cols="20" rows="3"></textarea>
           </div>
 
           <div>
@@ -41,7 +39,7 @@ get_header(); ?>
             <input type="text" name="quote_source_url" id="quote-source-url">
           </div>
 
-          <<input type="submit" value="Submit Quote">
+          <input id="submit-quote-button" type="submit" value="Submit Quote">
 
         </form>
         <p class="submit-success-message" style="display:none;"></p>
@@ -52,14 +50,11 @@ get_header(); ?>
 
 <p>None shall post!<p>
 
-<p> <?php echo sprintf( '<a href="%1s">%2s</a>', esc_ulr( wp_login_url() ), 'Click her to login.'); ?></p>
+<p> <?php echo sprintf( '<a href="%1s">%2s</a>', esc_url( wp_login_url() ), 'Click her to login.'); ?></p>
 
 <?php endif; ?>
 
     </section>
   </main>
 </div>
-
-
-
 <?php get_footer(); ?>
