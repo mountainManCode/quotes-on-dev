@@ -7,7 +7,7 @@
     $('#quote-title').empty();
     $('#quote-content').empty();
     $('.source').empty();
-    
+
     $.ajax({
        method: 'GET',
        url: api_vars.root_url + 'wp/v2/posts/?filter[orderby]=rand&filter[posts_per_page]=1',
@@ -30,38 +30,36 @@
     });
 
   /*Submit a Quote */
-    $('#submit-quote-button').on('click', function(event) {
-      event.preventDefault();
+  $('#submit-quote-button').on('click', function(event) {
+    event.preventDefault();
 
-        // Variables being called in ajax
-      var quoteAuthor = $('#quote-author').val();
-      var quoteContent = $('#quote-content').val();
-      var quoteSource = $('#quote-source').val();
-      var quoteSourceUrl = $("#quote-source-url").val();
-      $.ajax({
-         method: 'POST',
-         url: api_vars.root_url + 'wp/v2/posts',
-         data: {
-           "title":quoteAuthor,
-           "content": quoteContent,
-           "status": 'publish',
-           "_qod_quote_source": quoteSource, 
-           "_qod_quote_source_url": quoteSourceUrl
-        },
+      // Variables being called in ajax
+    var quoteAuthor = $('#quote-author').val();
+    var quoteContent = $('#quote-content').val();
+    var quoteSource = $('#quote-source').val();
+    var quoteSourceUrl = $("#quote-source-url").val();
+
+    $.ajax({
+       method: 'POST',
+       url: api_vars.root_url + 'wp/v2/posts',
+       data: {
+        "title": quoteAuthor,
+        "content": quoteContent,
+        "status": 'publish',
+        "_qod_quote_source": quoteSource, 
+        "_qod_quote_source_url": quoteSourceUrl
+      },
         
-        beforeSend: function(xhr) {
-          xhr.setRequestHeader( 'X-WP-Nonce', api_vars.nonce );
-        }
+      beforeSend: function(xhr) {
+        xhr.setRequestHeader( 'X-WP-Nonce', api_vars.nonce );
+      }
 
-      }).done( function() {
+    }).done( function() {
 
-        //  alert('Success!');
-      }).always(function() {
-        $("#quote-submission-form").trigger("reset");
-      })
-    });
+    //  alert('Success!');
+    }).always(function() {
+      $("#quote-submission-form").trigger("reset");
+    })
+  });
+
 })(jQuery);
-
-// success: function () {
-  
-//          }

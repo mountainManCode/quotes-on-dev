@@ -1,6 +1,36 @@
 /*--------------------------------------------------------------
 # Content
 --------------------------------------------------------------*/
+//Big quotes around the "quote".
+@include desktop {
+	.site-content { 
+	&:before,
+	&:after {
+	font-size: 200px;
+	// position: absolute;
+	font-family: 'FontAwesome';
+	}
+	&:before {
+			content: '\f10d';
+			left: -22rem;
+			color: $color__green-brand;
+	}
+	&:after {
+			content: '\f10e';
+			right: -20rem;
+			top: 0;
+			color: $color__green-brand;
+	}
+	}
+	// .logo {
+	// 	width: 400px;
+	// 	margin: 0 auto;
+	// }
+	// .page {
+	// 	width: 400px;
+	// 	margin: 0 auto;
+	// }
+}
 
 /* Posts and pages */
 
