@@ -4,9 +4,9 @@
   $('#new-quote-button').on('click', function(event) {
     event.preventDefault();
 
-    $('#quote-title').empty();
-    $('#quote-content').empty();
-    $('.source').empty();
+    // $('#quote-title').empty();
+    // $('#quote-content').empty();
+    // $('.source').empty();
 
     $.ajax({
        method: 'GET',
@@ -20,7 +20,7 @@
           $('#quote-content').html(post.content.rendered);
           
           if (data._qod_quote_source) {
-            // $('.comma').text(', ');
+            $('.comma').text(', ');
             $('.source').html('<a href="' + post._qod_quote_source_url + '">' + post._qod_quote_source + '</a>');
           }
 

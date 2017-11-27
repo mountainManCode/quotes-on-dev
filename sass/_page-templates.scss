@@ -2,11 +2,61 @@
 # Page Templates
 --------------------------------------------------------------*/
 /* All Pages */
-.site, .site-footer {
+.site {
   padding: 2.5%;
-  max-width: 1080px;
   width: 100%;
+
+  .site-content {
+    margin: 10vh 0;
+
+    @include desktop {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: center;
+
+      &:before,
+      &:after {
+        font-family: 'FontAwesome';
+        font-size: 150px;
+      }
+
+      &:before {
+        content: '\f10d';
+        align-self: flex-start;
+        color: $color__green-brand;
+      }
+      &:after {
+        content: '\f10e';
+        align-self: flex-start;
+        color: $color__green-brand;
+      }
+    }
+
+    .content-area {
+           
+          @include desktop {
+            flex-basis: 50%;
+            margin: 0 5vw;
+          }
+        }
+  }
 }
+/* Footer on all pages */
+.site-footer {
+	padding: 5% 0;
+}
+
 /* All Archives Page */
 
+.entry-title {
+  display: inline;
+}
+
+.source {
+  font-size: 1.5rem;
+}
+
+
 /* Submit a Quote Page */
+
+

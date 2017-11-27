@@ -1,6 +1,28 @@
 /*--------------------------------------------------------------
 # Forms
 --------------------------------------------------------------*/
+.form {
+	display: flex;
+	flex-flow: column nowrap;
+	margin: 1rem 0;
+ 
+	label {
+		margin: .5rem 0;
+	}
+
+	.quote-author, .quote-source, .quote-source-url {
+		width: 65%;
+
+		@include desktop {
+			width: 50%;
+		}
+	}
+
+	.quote-content {
+		width: 100%;
+	}
+}
+
 
 /* Buttons */
 
@@ -11,10 +33,17 @@ input[type="submit"] {
 	border: $border__solid;
 	border-radius: 3px;
 	background: $color__background-body;
-	color: $color__text-main;
-	font-size: .75rem;
+	color: $color__green-brand;
+	font-size: 1.25rem;
+	font-weight: 700;
 	line-height: 1;
-	padding: .6rem 1rem .4rem;
+	padding: .5rem 1rem;
+	width: 50%;
+
+	@include tablet {
+		width: 25%;
+	}
+
 
 	&:hover {
 		border-color: $color__green-brand;

@@ -1,6 +1,6 @@
 <?php
 /**
-*
+* Submit a quote page.
 *
 * @package QOD_Starter_Theme
 */
@@ -19,24 +19,24 @@ get_header(); ?>
 
       <div class="quote-submission-wrapper">
         <form name="quoteForm" id="quote-submission-form">
-          <div>
+          <div class="form">
             <label for="quote-author">Author of Quote</label>
-            <input type="text" name="quote_author" id="quote-author">
+            <input type="text" name="quote_author" id="quote-author" class="quote-author">
           </div>
 
-          <div>
+          <div class="form">
             <label for="quote-content">Quote</label>
-            <textarea type="text" name="quote_content" id="quote-content" cols="20" rows="3"></textarea>
+            <textarea type="text" name="quote_content" id="quote-content" class="quote-content" cols="20" rows="3"></textarea>
           </div>
 
-          <div>
+          <div class="form">
             <label for="quote-source">Where did you find this quote?</label>
-            <input type="text" name="quote_source" id="quote-source">
+            <input type="text" name="quote_source" id="quote-source" class="quote-source">
           </div>
 
-          <div>
+          <div class="form">
             <label for="quote-source-url">Provide a url source of the quote?</label>
-            <input type="text" name="quote_source_url" id="quote-source-url">
+            <input type="text" name="quote_source_url" id="quote-source-url" class="quote-source-url">
           </div>
 
           <input id="submit-quote-button" type="submit" value="Submit Quote">
