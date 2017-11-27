@@ -7,7 +7,7 @@
   width: 100%;
 
   .site-content {
-    margin: 10vh 0;
+    margin: 7.5vh 0;
 
     @include desktop {
       display: flex;
@@ -46,7 +46,19 @@
 	padding: 5% 0;
 }
 
-/* All Archives Page */
+/* All Single Quote Page */
+
+.archive .entry-content p, .blog .entry-content p, .single .entry-content p {
+  font-size: 1.25rem;
+
+  @include tablet {
+    font-size: 1.75rem;
+  }
+
+  @include desktop {
+    font-size: 2.5rem;
+  }
+}
 
 .entry-title {
   display: inline;
@@ -58,5 +70,29 @@
 
 
 /* Submit a Quote Page */
+.form {
+	display: flex;
+	flex-flow: column nowrap;
+	margin: 1rem 0;
+ 
+	label {
+		margin: .5rem 0;
+	}
 
+	.quote-author, .quote-source, .quote-source-url {
+		width: 65%;
+
+		@include desktop {
+			width: 50%;
+		}
+	}
+
+	.quote-content {
+		width: 100%;
+	}
+}
+
+.quote-submission-wrapper .submit-success.message {
+  display: inline-block;
+}
 

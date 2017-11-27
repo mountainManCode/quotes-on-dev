@@ -377,26 +377,12 @@ table {
 /*--------------------------------------------------------------
 # Forms
 --------------------------------------------------------------*/
-.form {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column nowrap;
-          flex-flow: column nowrap;
-  margin: 1rem 0; }
-  .form label {
-    margin: .5rem 0; }
-  .form .quote-author, .form .quote-source, .form .quote-source-url {
-    width: 65%; }
-    @media (min-width: 1080px) {
-      .form .quote-author, .form .quote-source, .form .quote-source-url {
-        width: 50%; } }
-  .form .quote-content {
-    width: 100%; }
-
 /* Buttons */
+@media (min-width: 1080px) {
+  #new-quote-button {
+    margin: 0 auto;
+    width: 100%; } }
+
 button,
 input[type="button"],
 input[type="reset"],
@@ -415,7 +401,8 @@ input[type="submit"] {
     input[type="button"],
     input[type="reset"],
     input[type="submit"] {
-      width: 25%; } }
+      width: 40%;
+      max-width: 350px; } }
   button:hover,
   input[type="button"]:hover,
   input[type="reset"]:hover,
@@ -664,7 +651,7 @@ object {
   padding: 2.5%;
   width: 100%; }
   .site .site-content {
-    margin: 10vh 0; }
+    margin: 7.5vh 0; }
     @media (min-width: 1080px) {
       .site .site-content {
         display: -webkit-box;
@@ -700,7 +687,16 @@ object {
 .site-footer {
   padding: 5% 0; }
 
-/* All Archives Page */
+/* All Single Quote Page */
+.archive .entry-content p, .blog .entry-content p, .single .entry-content p {
+  font-size: 1.25rem; }
+  @media (min-width: 620px) {
+    .archive .entry-content p, .blog .entry-content p, .single .entry-content p {
+      font-size: 1.75rem; } }
+  @media (min-width: 1080px) {
+    .archive .entry-content p, .blog .entry-content p, .single .entry-content p {
+      font-size: 2.5rem; } }
+
 .entry-title {
   display: inline; }
 
@@ -708,6 +704,28 @@ object {
   font-size: 1.5rem; }
 
 /* Submit a Quote Page */
+.form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  margin: 1rem 0; }
+  .form label {
+    margin: .5rem 0; }
+  .form .quote-author, .form .quote-source, .form .quote-source-url {
+    width: 65%; }
+    @media (min-width: 1080px) {
+      .form .quote-author, .form .quote-source, .form .quote-source-url {
+        width: 50%; } }
+  .form .quote-content {
+    width: 100%; }
+
+.quote-submission-wrapper .submit-success.message {
+  display: inline-block; }
+
 .hero {
   width: 50vw;
   max-height: 100%;

@@ -6,7 +6,7 @@
 
     // $('#quote-title').empty();
     // $('#quote-content').empty();
-    // $('.source').empty();
+    $('.source').empty();
 
     $.ajax({
        method: 'GET',
@@ -20,7 +20,6 @@
           $('#quote-content').html(post.content.rendered);
           
           if (data._qod_quote_source) {
-            $('.comma').text(', ');
             $('.source').html('<a href="' + post._qod_quote_source_url + '">' + post._qod_quote_source + '</a>');
           }
 
@@ -43,11 +42,11 @@
        method: 'POST',
        url: api_vars.root_url + 'wp/v2/posts',
        data: {
-        "title": quoteAuthor,
-        "content": quoteContent,
-        "status": 'publish',
-        "_qod_quote_source": quoteSource, 
-        "_qod_quote_source_url": quoteSourceUrl
+        'title': quoteAuthor,
+        'content': quoteContent,
+        'status': 'publish',
+        '_qod_quote_source': quoteSource, 
+        '_qod_quote_source_url': quoteSourceUrl
       },
         
       beforeSend: function(xhr) {
@@ -55,10 +54,12 @@
       }
 
     }).done( function() {
-
-    //  alert('Success!');
+      $('.submit-success-message').html('Your quote has been submitted, thanks!');
+      $('.submit-success-message').show;
     }).always(function() {
       $("#quote-submission-form").trigger("reset");
+    }).fail(function() {
+      return 'Your request can not be processed.';
     })
   });
 
