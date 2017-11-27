@@ -1,13 +1,48 @@
 /*--------------------------------------------------------------
 # Forms
 --------------------------------------------------------------*/
+/* Submit a Quote Page */
+
+.form {
+	display: flex;
+	flex-flow: column nowrap;
+	margin: 1rem 0;
+ 
+	label {
+		margin: .5rem 0;
+	}
+
+	.quote-author, .quote-source, .quote-source-url {
+		width: 65%;
+
+		@include desktop {
+			width: 50%;
+		}
+	}
+
+	.quote-content {
+		width: 100%;
+	}
+}
+
+.quote-submission-wrapper .submit-success.message {
+  display: inline-block;
+}
+
 /* Buttons */
 
-@include desktop {
-	#new-quote-button {
+.single-post button {
+	margin: 5rem;
+	@include desktop {
 		margin: 0 auto;
 		width: 100%;
 	}
+}
+
+.error404 .search-submit {
+	border: none;
+	padding: .5rem .25rem;
+	width: 10%;
 }
 
 button,
@@ -32,10 +67,6 @@ input[type="submit"] {
 	&:hover {
 		border-color: $color__green-brand;
 	}
-
-	&:active {
-		border-color: $color__green-brand;
-	}
 }
 
 /* Fields */
@@ -50,6 +81,10 @@ textarea {
 	background-color: $color__background-body; 
 	border: $border__solid;
 	border-radius: 3px;
+
+	@include tablet {
+		font-size: 1.25rem;
+	}
 }
 
 input[type="text"],

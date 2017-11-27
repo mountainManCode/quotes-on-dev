@@ -4,8 +4,6 @@
   $('#new-quote-button').on('click', function(event) {
     event.preventDefault();
 
-    $('#quote-content').empty();
-    $('#quote-title').empty();
     $('.source').empty();
 
     $.ajax({
@@ -19,8 +17,8 @@
           $('#quote-title').text(post.title.rendered).prepend('&mdash;');
           $('#quote-content').html(post.content.rendered);
           
-          if (data._qod_quote_source) {
-            $('.source').html('<a href="' + post._qod_quote_source_url + '">' + post._qod_quote_source + '</a>');
+          if (post._qod_quote_source) {
+            $('.source').html(', <a href="' + post._qod_quote_source_url + '">' + post._qod_quote_source + '</a>');
           }
 
       }).fail(function() {
@@ -36,7 +34,7 @@
     var quoteAuthor = $('#quote-author').val();
     var quoteContent = $('#quote-content').val();
     var quoteSource = $('#quote-source').val();
-    var quoteSourceUrl = $("#quote-source-url").val();
+    var quoteSourceUrl = $('#quote-source-url').val();
 
     $.ajax({
        method: 'POST',
@@ -62,5 +60,4 @@
       return 'Your request can not be processed.';
     })
   });
-
 })(jQuery);

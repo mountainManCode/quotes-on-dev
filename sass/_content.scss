@@ -1,14 +1,83 @@
 /*--------------------------------------------------------------
 # Content
 --------------------------------------------------------------*/
+/* All Single Quote Pages and Archive Pages*/
+
+.archive .entry-content p, .blog .entry-content p, .single .entry-content p {
+  font-size: 1.25rem;
+
+  @include tablet {
+    font-size: 1.75rem;
+  }
+
+  @include desktop {
+    font-size: 2.5rem;
+  }
+}
+
+.entry-title {
+  display: inline;
+}
+
+.source {
+	font-size: 1.5rem;
+	height: $base__space-unit;
+}
+
+.single-post .post {
+	margin-bottom: 5vh;
+}
+
+/* Archive Page */
+
+.category-archives ul, .post-archives ul, .tag-archives ul {
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.archive-lists, .wp-tag-cloud {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+}
+
+.tag-archives ul li, .category-archives ul li, .post-archives ul li, {
+  margin-bottom: .5rem;
+  margin-right: 1.25rem;
+
+  // @include tablet {
+  //   font-size: 1.25rem;
+  // }
+}
+
+// .tag-archives .wp-tag-cloud li {
+//   font-size: 1.25rem
+// }
+
 /* Posts and pages */
+
+.tag, .category {
+	.page-header, .page-header {
+		border-bottom: $border__dashed;
+	}
+
+	.hentry {
+		margin: 0 0 $base__space-unit;
+		padding: 0 0 $base__space-unit;
+		border-bottom: $border__dashed;
+	}
+
+	.entry-title, .entry-content {
+		font-weight: 300;
+	}
+
+	.page-numbers {
+		margin: 0 .5rem 0 0;
+	}
+}
 
 .sticky {
 	display: block;
-}
-
-.hentry {
-	margin: 0 0 $base__space-unit;
 }
 
 .updated:not(.published){
