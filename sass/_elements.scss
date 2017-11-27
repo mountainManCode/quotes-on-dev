@@ -43,11 +43,12 @@ hr {
 }
 
 ul, ol {
-	margin: 0 0 $base__space-unit ($base__space-unit * 2);
+	margin: 0 0 $base__space-unit 0;
+	width: 100%;
 }
 
 ul {
-	list-style: disc;
+	list-style: none;
 }
 
 ol {
@@ -57,7 +58,8 @@ ol {
 li > ul,
 li > ol {
 	margin-bottom: 0;
-	margin-left: $base__space-unit;
+	margin-left: 0;
+	width: 100%;
 }
 
 dt {

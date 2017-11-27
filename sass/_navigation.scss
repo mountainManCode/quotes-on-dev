@@ -12,13 +12,10 @@ a {
 		color: $color__link-visited;
 	}
 	&:hover,
-	&:focus,
 	&:active {
 		color: $color__link-hover;
 	}
-	&:focus {
-		outline: thin dotted;
-	}
+
 	&:hover,
 	&:active {
 		outline: 0;
@@ -75,15 +72,6 @@ a {
 				border-right: 1px solid #fff;
 				padding: 0 1rem;
 			}
-
-			:hover > a,
-			.focus > a {
-			}
-
-			a:hover,
-			a.focus {
-			}
-		
 
 		li:hover > ul,
 		li.focus > ul {

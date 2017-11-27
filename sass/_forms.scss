@@ -8,9 +8,6 @@
 		margin: 0 auto;
 		width: 100%;
 	}
-	// .blog .entry-content, .single .entry-content {
-		
-	// }
 }
 
 button,
@@ -36,8 +33,7 @@ input[type="submit"] {
 		border-color: $color__green-brand;
 	}
 
-	&:active,
-	&:focus {
+	&:active {
 		border-color: $color__green-brand;
 	}
 }
@@ -54,10 +50,6 @@ textarea {
 	background-color: $color__background-body; 
 	border: $border__solid;
 	border-radius: 3px;
-
-	&:focus {
-		color: $color__text-main;
-	}
 }
 
 input[type="text"],

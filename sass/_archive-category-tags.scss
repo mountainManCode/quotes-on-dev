@@ -1,0 +1,13 @@
+/* Template for Category and Tag single archives */
+
+.tag, .category {
+
+    .hentry {    
+    border-bottom: $border__dashed;
+    padding: 1.5rem 0;
+    }
+
+    .entry-content {
+        // margin: rem 0 0;
+    }
+}

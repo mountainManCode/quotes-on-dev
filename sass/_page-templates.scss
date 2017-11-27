@@ -17,7 +17,7 @@
       &:before,
       &:after {
         font-family: 'FontAwesome';
-        font-size: 150px;
+        font-size: 125px;
       }
 
       &:before {
@@ -34,20 +34,15 @@
 
     .content-area {
            
-          @include desktop {
-            flex-basis: 50%;
-            margin: 0 5vw;
-          }
-        }
+      @include desktop {
+        flex-basis: 50%;
+        margin: 0 5vw;
+      }
+    }
   }
-}
-/* Footer on all pages */
-.site-footer {
-	padding: 5% 0;
 }
 
 /* All Single Quote Page */
-
 .archive .entry-content p, .blog .entry-content p, .single .entry-content p {
   font-size: 1.25rem;
 
@@ -67,7 +62,31 @@
 .source {
   font-size: 1.5rem;
 }
+/* Footer on all pages */
+.site-footer {
+	padding: 5% 0;
+}
 
+/* Archive Page */
+.category-archives ul, .post-archives ul, .tag-archives ul {
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.archive-lists, .wp-tag-cloud {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+}
+
+.tag-archives ul li, .category-archives ul li, .post-archives ul li, {
+  margin-bottom: .5rem;
+  margin-right: 1.25rem;
+
+  // @include tablet {
+  //   font-size: 1.25rem;
+  // }
+}
 
 /* Submit a Quote Page */
 .form {

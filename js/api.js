@@ -4,8 +4,8 @@
   $('#new-quote-button').on('click', function(event) {
     event.preventDefault();
 
-    // $('#quote-title').empty();
-    // $('#quote-content').empty();
+    $('#quote-content').empty();
+    $('#quote-title').empty();
     $('.source').empty();
 
     $.ajax({
@@ -57,7 +57,7 @@
       $('.submit-success-message').html('Your quote has been submitted, thanks!');
       $('.submit-success-message').show;
     }).always(function() {
-      $("#quote-submission-form").trigger("reset");
+      $('#quote-submission-form').trigger('reset');
     }).fail(function() {
       return 'Your request can not be processed.';
     })
