@@ -24,7 +24,7 @@
 	height: $base__space-unit;
 }
 
-.single-post .post {
+.home .post, .single-post .post {
 	margin-bottom: 5vh;
 }
 
@@ -44,15 +44,7 @@
 .tag-archives ul li, .category-archives ul li, .post-archives ul li, {
   margin-bottom: .5rem;
   margin-right: 1.25rem;
-
-  // @include tablet {
-  //   font-size: 1.25rem;
-  // }
 }
-
-// .tag-archives .wp-tag-cloud li {
-//   font-size: 1.25rem
-// }
 
 /* Posts and pages */
 

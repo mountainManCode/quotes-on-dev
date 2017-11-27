@@ -2,7 +2,7 @@
 
 A WordPress starter theme for the Quotes on Dev project, forked from Underscores. The site is heavily inspired by Chris Coyier’s Quotes on Design. It was a sandbox of playing with tools such as: AJAX, WP api, and jQuery.
 
-  ![Quotes on Dev Screen Shot](assets/images/qod-screenshot.png "Quotes on Dev")
+  ![Quotes on Dev Screen Shot](/assets/images/qod-screenshot.png "Quotes on Dev")
 
 ## Technology Used
 * HTML5

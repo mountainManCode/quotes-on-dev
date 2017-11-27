@@ -643,7 +643,7 @@ a {
   font-size: 1.5rem;
   height: 1.5rem; }
 
-.single-post .post {
+.home .post, .single-post .post {
   margin-bottom: 5vh; }
 
 /* Archive Page */
